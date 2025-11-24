@@ -6,7 +6,7 @@ export const AboutSection = () => {
           Nossa Missão
         </h2>
         <p className="mt-4 max-w-3xl mx-auto text-xl leading-8 text-gray-700">
-          “Nossa missão é ajudar famílias cristãs a criarem filhos fortes na fé, com materiais simples, bonitos e totalmente alinhados à Palavra de Deus.”
+          “Nossa missão é equipar famílias cristãs para edificarem um lar sobre a Rocha, criando filhos com corações firmes no Senhor, através de materiais que glorificam a Deus em sua simplicidade, beleza e fidelidade à Sua Palavra.”
         </p>
       </div>
     </section>

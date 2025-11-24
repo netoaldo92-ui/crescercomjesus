@@ -15,12 +15,9 @@ export const HeroSection = () => {
         <p className="mt-6 max-w-3xl mx-auto text-lg leading-8 text-gray-600 sm:text-xl">
           Tenha acesso imediato a histórias cristãs ilustradas + atividades divertidas que fazem seu filho amar aprender a Palavra.
         </p>
-        <div className="mt-10 flex items-center justify-center gap-x-6">
+        <div className="mt-10 flex items-center justify-center">
           <Button size="lg" className="bg-brand-yellow text-black hover:bg-brand-yellow/90 shadow-lg text-lg px-8 py-6 rounded-full">
             Quero garantir agora
-          </Button>
-          <Button size="lg" variant="outline" className="bg-transparent text-lg px-8 py-6 rounded-full">
-            Entrar na Comunidade no WhatsApp
           </Button>
         </div>
         <div className="mt-16">

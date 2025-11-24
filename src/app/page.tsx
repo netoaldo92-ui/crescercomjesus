@@ -3,11 +3,10 @@ import { BenefitsSection } from "@/components/landing/benefits-section";
 import { CategoriesSection } from "@/components/landing/categories-section";
 import { TestimonialsSection } from "@/components/landing/testimonials-section";
 import { OfferSection } from "@/components/landing/offer-section";
-import { CommunitySection } from "@/components/landing/community-section";
+import { AffiliateSection } from "@/components/landing/affiliate-section";
 import { GuaranteeSection } from "@/components/landing/guarantee-section";
 import { AboutSection } from "@/components/landing/about-section";
 import { PageFooter } from "@/components/landing/page-footer";
-import { FloatingWhatsAppButton } from "@/components/landing/floating-whatsapp-button";
 
 export default function LandingPage() {
   return (
@@ -18,12 +17,11 @@ export default function LandingPage() {
         <CategoriesSection />
         <TestimonialsSection />
         <OfferSection />
-        <CommunitySection />
+        <AffiliateSection />
         <GuaranteeSection />
         <AboutSection />
       </main>
       <PageFooter />
-      <FloatingWhatsAppButton />
     </div>
   );
 }
