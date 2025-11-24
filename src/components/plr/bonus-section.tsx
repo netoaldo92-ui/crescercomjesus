@@ -34,7 +34,7 @@ export const BonusSection = () => {
               
               <div className="mt-8">
                 <p className="text-blue-700 font-semibold">
-                  Valor deste bônus: R$ 197,00 <span className="line-through text-gray-500">— GRÁTIS para você!</span>
+                  Valor deste bônus: R$ 97,00 <span className="line-through text-gray-500">— GRÁTIS para você!</span>
                 </p>
               </div>
             </div>

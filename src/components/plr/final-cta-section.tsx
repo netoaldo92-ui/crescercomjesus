@@ -34,10 +34,10 @@ export const FinalCtaSection = () => {
               <div className="text-left mb-6 sm:mb-0">
                 <p className="text-xl opacity-80">Investimento único:</p>
                 <div className="flex items-center">
-                  <p className="text-lg line-through opacity-70 mr-3">R$ 497</p>
-                  <p className="text-4xl sm:text-5xl font-bold">R$ 197</p>
+                  <p className="text-lg line-through opacity-70 mr-3">R$ 297,00</p>
+                  <p className="text-4xl sm:text-5xl font-bold">R$ 29,90</p>
                 </div>
-                <p className="text-sm opacity-80 mt-2">ou 12x de R$ 19,70</p>
+                <p className="text-sm opacity-80 mt-2">ou 3x de R$ 9,97</p>
               </div>
               
               <div className="text-right">
