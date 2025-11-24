@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
 
 // Simulação de notificações de venda
 const salesNotifications = [
@@ -61,14 +60,15 @@ export const HeroSection = () => {
         </div>
         
         <div className="mt-16 flex justify-center">
-          {/* Imagem do Canva */}
-          <div className="relative w-full max-w-4xl rounded-2xl overflow-hidden shadow-xl">
-            {/* Quando tiver a URL direta da imagem, substitua o src abaixo */}
-            <img 
-              src="/placeholder-canva-image.jpg" 
-              alt="Material infantil cristão PLR" 
-              className="w-full h-auto rounded-2xl"
-            />
+          {/* Imagem do Canva (primeira página) */}
+          <div className="relative w-full max-w-5xl rounded-2xl overflow-hidden shadow-xl">
+            <div className="flex justify-center items-center bg-white p-5 rounded-2xl shadow-lg">
+              <img 
+                src="/canva-primeira-pagina.jpg" 
+                alt="Material infantil cristão PLR" 
+                className="w-full h-auto rounded-lg max-w-4xl"
+              />
+            </div>
             
             {/* Elementos decorativos */}
             <div className="absolute -top-6 -right-6 w-24 h-24 bg-yellow-300 rounded-full opacity-30 pulse-animation"></div>
