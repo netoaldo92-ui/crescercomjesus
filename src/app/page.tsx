@@ -1,30 +1,43 @@
-import { HeroSection } from "@/components/landing/hero-section";
-import { ProblemSection } from "@/components/landing/problem-section";
-import { ProductSection } from "@/components/landing/product-section";
-import { WhatYouGetSection } from "@/components/landing/what-you-get-section";
-import { TestimonialsSection } from "@/components/landing/testimonials-section";
-import { OfferSection } from "@/components/landing/offer-section";
-import { GuaranteeSection } from "@/components/landing/guarantee-section";
-import { FaqSection } from "@/components/landing/faq-section";
-import { PageFooter } from "@/components/landing/page-footer";
-import { BackToTopButton } from "@/components/landing/back-to-top-button";
+import { Header } from "@/components/plr/header";
+import { HeroSection } from "@/components/plr/hero-section";
+import { PresentationSection } from "@/components/plr/presentation-section";
+import { ShowcaseSection } from "@/components/plr/showcase-section";
+import { KitContentsSection } from "@/components/plr/kit-contents-section";
+import { ProductDescriptionSection } from "@/components/plr/product-description-section";
+import { ActivitySamplesSection } from "@/components/plr/activity-samples-section";
+import { PurposeSection } from "@/components/plr/purpose-section";
+import { SalesPageSection } from "@/components/plr/sales-page-section";
+import { LicenseSection } from "@/components/plr/license-section";
+import { BonusSection } from "@/components/plr/bonus-section";
+import { FinalCtaSection } from "@/components/plr/final-cta-section";
 
 export default function LandingPage() {
   return (
-    <div className="bg-background font-sans">
-      <main>
+    <div className="font-sans">
+      <Header />
+      <main className="overflow-hidden">
         <HeroSection />
-        <ProblemSection />
-        <ProductSection />
-        <WhatYouGetSection />
-        <TestimonialsSection />
-        <OfferSection />
-        <GuaranteeSection />
-        <FaqSection />
-        <OfferSection /> {/* Repetir a oferta no final, como no site original */}
+        <PresentationSection />
+        <ShowcaseSection />
+        <KitContentsSection />
+        <ProductDescriptionSection />
+        <ActivitySamplesSection />
+        <PurposeSection />
+        <SalesPageSection />
+        <LicenseSection />
+        <BonusSection />
+        <FinalCtaSection />
       </main>
-      <PageFooter />
-      <BackToTopButton />
+      
+      <footer className="bg-gray-900 text-white py-6 text-center text-sm">
+        <div className="container mx-auto px-4">
+          <div className="flex justify-center space-x-4 mb-4">
+            <a href="#" className="hover:text-blue-300">Política de Privacidade</a>
+            <a href="#" className="hover:text-blue-300">Termos de Uso</a>
+          </div>
+          <p>© {new Date().getFullYear()} PLR Luz Infantil. Todos os direitos reservados.</p>
+        </div>
+      </footer>
     </div>
   );
 }

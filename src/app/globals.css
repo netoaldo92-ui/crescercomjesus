@@ -4,35 +4,35 @@
 
 @layer base {
   :root {
-    --background: 253 31% 4%; /* Cor de fundo ainda mais escura */
-    --foreground: 0 0% 98%; /* Branco */
+    --background: 210 100% 97%; /* Azul muito claro, quase branco */
+    --foreground: 224 71% 4%; /* Texto escuro */
 
-    --card: 253 25% 8%;
-    --card-foreground: 0 0% 98%;
+    --card: 0 0% 100%; /* Branco */
+    --card-foreground: 224 71% 4%; /* Texto escuro */
 
-    --popover: 253 31% 4%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71% 4%;
 
-    --primary: 45 100% 70%; /* Amarelo mais vibrante */
-    --primary-foreground: 253 31% 4%;
+    --primary: 212 100% 47%; /* Azul primário */
+    --primary-foreground: 0 0% 100%; /* Branco */
 
-    --secondary: 253 30% 10%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 210 40% 96%; /* Azul muito claro */
+    --secondary-foreground: 222 47% 11%; /* Azul escuro */
 
-    --muted: 253 25% 15%;
-    --muted-foreground: 0 0% 63.9%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
 
-    --accent: 45 100% 70%;
-    --accent-foreground: 253 31% 4%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222 47% 11%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 253 25% 15%;
-    --input: 253 25% 15%;
-    --ring: 45 100% 70%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 222 84% 48%;
 
-    --radius: 0.5rem;
+    --radius: 0.8rem; /* Bordas mais arredondadas */
   }
 }
 
@@ -40,8 +40,9 @@
   * {
     @apply border-border;
   }
+  
   body {
-    @apply bg-background text-foreground;
+    @apply bg-gradient-to-b from-blue-400 to-blue-600 min-h-screen text-foreground;
     font-family: 'Inter', sans-serif;
   }
   
@@ -50,10 +51,45 @@
   }
 }
 
-/* Estilos específicos para botões como no site original */
+.blue-gradient {
+  @apply bg-gradient-to-r from-blue-500 to-blue-600;
+}
+
+.glow-effect {
+  @apply relative;
+}
+
+.glow-effect::before {
+  content: '';
+  @apply absolute inset-0 -z-10 bg-blue-300 blur-xl opacity-30 rounded-lg transform scale-95;
+}
+
 .cta-button {
-  @apply bg-brand-yellow text-gray-900 font-bold hover:bg-brand-yellow/90 
-         shadow-lg py-6 px-8 rounded-md text-center transition-all
-         border-2 border-brand-yellow/30 hover:scale-[1.02] 
-         hover:shadow-xl hover:border-brand-yellow/50;
+  @apply bg-blue-400 text-white font-bold 
+         shadow-lg py-6 px-8 rounded-xl text-center transition-all
+         border-2 border-blue-300 hover:scale-[1.02] 
+         hover:shadow-xl hover:bg-blue-500;
+}
+
+.card-hover {
+  @apply transition-all duration-300 hover:shadow-lg hover:scale-[1.02];
+}
+
+.pop-notification {
+  @apply fixed bottom-4 left-4 bg-white p-4 rounded-lg shadow-lg border-l-4 border-green-500 z-50 
+         animate-in slide-in-from-bottom ease-in-out duration-500;
+}
+
+/* Animação para os badges/elementos destacados */
+@keyframes pulse-light {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(96, 165, 250, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 20px 5px rgba(96, 165, 250, 0.5);
+  }
+}
+
+.pulse-animation {
+  animation: pulse-light 2s infinite;
 }
