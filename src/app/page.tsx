@@ -1,6 +1,6 @@
 import { HeroSection } from "@/components/landing/hero-section";
 import { BenefitsSection } from "@/components/landing/benefits-section";
-import { IncludedSection } from "@/components/landing/included-section";
+import { CategoriesSection } from "@/components/landing/categories-section";
 import { TestimonialsSection } from "@/components/landing/testimonials-section";
 import { OfferSection } from "@/components/landing/offer-section";
 import { CommunitySection } from "@/components/landing/community-section";
@@ -15,7 +15,7 @@ export default function LandingPage() {
       <main>
         <HeroSection />
         <BenefitsSection />
-        <IncludedSection />
+        <CategoriesSection />
         <TestimonialsSection />
         <OfferSection />
         <CommunitySection />
