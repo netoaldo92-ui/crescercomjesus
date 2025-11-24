@@ -1,32 +1,57 @@
+"use client";
 import { Button } from "@/components/ui/button";
-import { Tag } from "lucide-react";
+import { Volume2, VolumeX } from "lucide-react";
+import { useState, useRef } from "react";
 
 export const HeroSection = () => {
+  const [isMuted, setIsMuted] = useState(true);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const toggleMute = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = !videoRef.current.muted;
+      setIsMuted(!isMuted);
+    }
+  };
+
   return (
-    <section className="w-full bg-blue-50 py-20 md:py-32">
-      <div className="container mx-auto px-4 text-center">
-        <div className="mb-4 inline-flex items-center rounded-full bg-brand-yellow/30 px-4 py-1 text-sm font-semibold text-yellow-800">
-          <Tag className="mr-2 h-4 w-4" />
-          Promoção válida por tempo limitado
-        </div>
-        <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
-          Transforme os momentos com seus filhos em experiências de fé, alegria e valores
+    <section className="relative h-screen flex items-center justify-center text-center text-white overflow-hidden">
+      <div className="absolute top-0 left-0 w-full h-full bg-black/60 z-10"></div>
+      <video
+        ref={videoRef}
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute top-1/2 left-1/2 w-full h-full object-cover transform -translate-x-1/2 -translate-y-1/2 z-0"
+        src="https://videos.pexels.com/video-files/854711/854711-hd_1920_1080_25fps.mp4" // URL do vídeo de placeholder
+      >
+        Seu navegador não suporta o elemento de vídeo.
+      </video>
+      
+      <div className="relative z-20 container mx-auto px-4">
+        <h1 className="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight">
+          A Maneira Divertida de Ensinar a Bíblia para seu Filho
         </h1>
-        <p className="mt-6 max-w-3xl mx-auto text-lg leading-8 text-gray-600 sm:text-xl">
-          Tenha acesso imediato a histórias cristãs ilustradas + atividades divertidas que fazem seu filho amar aprender a Palavra.
+        <p className="mt-6 max-w-3xl mx-auto text-lg md:text-xl text-gray-200">
+          Transforme a educação cristã em uma aventura diária com histórias e atividades que encantam.
         </p>
-        <div className="mt-10 flex items-center justify-center">
-          <Button size="lg" className="bg-brand-yellow text-black hover:bg-brand-yellow/90 shadow-lg text-lg px-8 py-6 rounded-full">
-            Quero garantir agora
+        <div className="mt-10">
+          <Button 
+            size="lg" 
+            className="bg-brand-yellow text-gray-900 font-bold hover:bg-brand-yellow/90 shadow-lg text-xl px-10 py-8 rounded-md w-full max-w-md mx-auto"
+          >
+            QUERO ENSINAR A BÍBLIA DE FORMA DIVERTIDA
           </Button>
         </div>
-        <div className="mt-16">
-            {/* Placeholder for an image/illustration */}
-            <div className="relative mx-auto w-full max-w-4xl h-64 md:h-96 rounded-2xl bg-gray-200 flex items-center justify-center">
-                <p className="text-gray-500">Ilustração de família lendo a Bíblia</p>
-            </div>
-        </div>
       </div>
+
+      <button 
+        onClick={toggleMute}
+        className="absolute bottom-5 right-5 z-20 bg-black/50 p-2 rounded-full text-white hover:bg-black/70"
+      >
+        {isMuted ? <VolumeX size={20} /> : <Volume2 size={20} />}
+      </button>
     </section>
   );
 };

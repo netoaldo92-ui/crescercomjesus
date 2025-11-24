@@ -1,25 +1,25 @@
 import { HeroSection } from "@/components/landing/hero-section";
-import { BenefitsSection } from "@/components/landing/benefits-section";
-import { CategoriesSection } from "@/components/landing/categories-section";
+import { ProblemSection } from "@/components/landing/problem-section";
+import { ProductSection } from "@/components/landing/product-section";
+import { WhatYouGetSection } from "@/components/landing/what-you-get-section";
 import { TestimonialsSection } from "@/components/landing/testimonials-section";
 import { OfferSection } from "@/components/landing/offer-section";
-import { AffiliateSection } from "@/components/landing/affiliate-section";
 import { GuaranteeSection } from "@/components/landing/guarantee-section";
-import { AboutSection } from "@/components/landing/about-section";
+import { FaqSection } from "@/components/landing/faq-section";
 import { PageFooter } from "@/components/landing/page-footer";
 
 export default function LandingPage() {
   return (
-    <div className="bg-white font-sans">
+    <div className="bg-background font-sans">
       <main>
         <HeroSection />
-        <BenefitsSection />
-        <CategoriesSection />
+        <ProblemSection />
+        <ProductSection />
+        <WhatYouGetSection />
         <TestimonialsSection />
         <OfferSection />
-        <AffiliateSection />
         <GuaranteeSection />
-        <AboutSection />
+        <FaqSection />
       </main>
       <PageFooter />
     </div>
