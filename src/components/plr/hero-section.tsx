@@ -60,11 +60,11 @@ export const HeroSection = () => {
         </div>
         
         <div className="mt-16 flex justify-center">
-          {/* Imagem do Canva (primeira página) */}
+          {/* Imagem do Pinterest */}
           <div className="relative w-full max-w-5xl rounded-2xl overflow-hidden shadow-xl">
             <div className="flex justify-center items-center bg-white p-5 rounded-2xl shadow-lg">
               <img 
-                src="/canva-primeira-pagina.jpg" 
+                src="https://i.pinimg.com/736x/1a/fd/48/1afd48e1e544cc46bdb515fc8445c2ce.jpg" 
                 alt="Material infantil cristão PLR" 
                 className="w-full h-auto rounded-lg max-w-4xl"
               />
