@@ -1,14 +1,29 @@
-import { MadeWithLasy } from "@/components/made-with-lasy";
+import { HeroSection } from "@/components/landing/hero-section";
+import { BenefitsSection } from "@/components/landing/benefits-section";
+import { IncludedSection } from "@/components/landing/included-section";
+import { TestimonialsSection } from "@/components/landing/testimonials-section";
+import { OfferSection } from "@/components/landing/offer-section";
+import { CommunitySection } from "@/components/landing/community-section";
+import { GuaranteeSection } from "@/components/landing/guarantee-section";
+import { AboutSection } from "@/components/landing/about-section";
+import { PageFooter } from "@/components/landing/page-footer";
+import { FloatingWhatsAppButton } from "@/components/landing/floating-whatsapp-button";
 
-export default function Home() {
+export default function LandingPage() {
   return (
-    <div className="flex items-center justify-center min-h-screen p-8 pb-20 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-1 items-center sm:items-start">
-        <h1 className="text-4xl font-bold mb-4">Bem Vindo ao Seu Novo App</h1>
-        <p className="text-xl text-gray-600">
-          Hora de transformar ideias em realidade!
-        </p>
+    <div className="bg-white font-sans">
+      <main>
+        <HeroSection />
+        <BenefitsSection />
+        <IncludedSection />
+        <TestimonialsSection />
+        <OfferSection />
+        <CommunitySection />
+        <GuaranteeSection />
+        <AboutSection />
       </main>
-      </div>
+      <PageFooter />
+      <FloatingWhatsAppButton />
+    </div>
   );
 }

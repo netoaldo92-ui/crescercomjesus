@@ -1,0 +1,55 @@
+import { Card, CardContent } from "@/components/ui/card";
+import { Star } from "lucide-react";
+
+const testimonials = [
+  {
+    quote: "Meu filho nunca tinha pedido para ler a Bíblia… agora ele me chama TODA NOITE para a história do dia!",
+    author: "Ana",
+    role: "mãe da Sofia (5)",
+  },
+  {
+    quote: "Finalmente achei um material cristão que prende atenção e ensina valores. Virou rotina aqui em casa!",
+    author: "Marcos",
+    role: "pai do Davi (7)",
+  },
+  {
+    quote: "As atividades são muito fofas! Minha filha aprendeu sobre gratidão enquanto coloria!",
+    author: "Juliana",
+    role: "mãe da Clara (4)",
+  },
+];
+
+export const TestimonialsSection = () => {
+  return (
+    <section className="py-20 sm:py-24 bg-white">
+      <div className="container mx-auto px-4">
+        <div className="text-center">
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            Famílias que já estão amando
+          </h2>
+          <p className="mt-4 text-lg leading-8 text-gray-600">
+            Veja o que os pais estão dizendo sobre essa transformação.
+          </p>
+        </div>
+        <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {testimonials.map((testimonial) => (
+            <Card key={testimonial.author} className="p-6 shadow-lg border-brand-yellow/50">
+              <CardContent className="p-0">
+                <div className="flex mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-5 w-5 text-brand-yellow fill-current" />
+                  ))}
+                </div>
+                <blockquote className="text-gray-700 italic">“{testimonial.quote}”</blockquote>
+                <footer className="mt-4">
+                  <p className="font-semibold text-gray-900">{testimonial.author}</p>
+                  <p className="text-gray-500">{testimonial.role}</p>
+                </footer>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
