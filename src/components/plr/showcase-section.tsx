@@ -1,5 +1,50 @@
 import { ArrowRight } from "lucide-react";
 
+// Adicionando imagens reais para as histórias bíblicas
+const biblicalStories = [
+  { 
+    image: "https://i.pinimg.com/736x/e4/e1/0e/e4e10e6cf6c607073ddd0041799e765a.jpg",
+    title: "Arca de Noé",
+    type: "Atividade bíblica ilustrada"
+  },
+  { 
+    image: "https://i.pinimg.com/736x/d3/13/e9/d313e933218e8794d5108710298d6c7d.jpg",
+    title: "Daniel e os Leões",
+    type: "Personagem bíblico infantil"
+  },
+  { 
+    image: "https://i.pinimg.com/736x/c1/64/0b/c1640bc59c80f104bda3e79f3dd09c42.jpg",
+    title: "Davi e Golias",
+    type: "Atividade bíblica ilustrada"
+  },
+  { 
+    image: "https://i.pinimg.com/736x/cb/c4/a7/cbc4a702620bc869c5949e243a05fb64.jpg",
+    title: "Jesus e as Crianças",
+    type: "Personagem bíblico infantil"
+  },
+  // Duplicando para completar o grid
+  { 
+    image: "https://i.pinimg.com/736x/e4/e1/0e/e4e10e6cf6c607073ddd0041799e765a.jpg",
+    title: "Arca de Noé - Colorir",
+    type: "Atividade bíblica ilustrada"
+  },
+  { 
+    image: "https://i.pinimg.com/736x/d3/13/e9/d313e933218e8794d5108710298d6c7d.jpg",
+    title: "Daniel - Jogo da Memória",
+    type: "Jogo bíblico infantil"
+  },
+  { 
+    image: "https://i.pinimg.com/736x/c1/64/0b/c1640bc59c80f104bda3e79f3dd09c42.jpg",
+    title: "Davi - Quebra-cabeça",
+    type: "Jogo bíblico infantil"
+  },
+  { 
+    image: "https://i.pinimg.com/736x/cb/c4/a7/cbc4a702620bc869c5949e243a05fb64.jpg",
+    title: "Jesus - Atividades",
+    type: "Material educativo cristão"
+  },
+];
+
 export const ShowcaseSection = () => {
   return (
     <section className="py-20 sm:py-24 bg-blue-50">
@@ -15,26 +60,22 @@ export const ShowcaseSection = () => {
         
         {/* Grid de imagens do produto */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 max-w-5xl mx-auto">
-          {[...Array(8)].map((_, index) => (
+          {biblicalStories.map((story, index) => (
             <div 
               key={index} 
               className="aspect-[3/4] bg-white rounded-lg overflow-hidden shadow-md card-hover"
             >
               <div className="h-full flex flex-col">
-                <div className="flex-1 bg-blue-100 p-2 flex items-center justify-center">
-                  <p className="text-center text-blue-500 text-sm">
-                    {index % 2 === 0 ? 
-                      "Atividade bíblica ilustrada" : 
-                      "Personagem bíblico infantil"}
-                  </p>
+                <div className="flex-1 overflow-hidden">
+                  <img 
+                    src={story.image} 
+                    alt={story.title} 
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <div className="p-3 bg-white">
-                  <p className="text-sm font-medium text-gray-800 text-center">
-                    {index % 4 === 0 ? "Arca de Noé" : 
-                     index % 4 === 1 ? "Daniel e os Leões" : 
-                     index % 4 === 2 ? "Davi e Golias" : 
-                     "Jesus e as Crianças"}
-                  </p>
+                  <p className="text-xs text-blue-500 font-medium">{story.type}</p>
+                  <p className="text-sm font-medium text-gray-800 mt-1">{story.title}</p>
                 </div>
               </div>
             </div>

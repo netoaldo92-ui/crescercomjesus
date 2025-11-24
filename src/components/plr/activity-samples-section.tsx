@@ -17,6 +17,51 @@ const recentBuyers = [
   { name: "Gabriela", time: "há 12 minutos" },
 ];
 
+// Imagens de atividades bíblicas
+const biblicalActivities = [
+  {
+    image: "https://i.pinimg.com/736x/e4/e1/0e/e4e10e6cf6c607073ddd0041799e765a.jpg",
+    title: "Arca de Noé",
+    type: "Atividade: Pintura Bíblica"
+  },
+  {
+    image: "https://i.pinimg.com/736x/d3/13/e9/d313e933218e8794d5108710298d6c7d.jpg",
+    title: "Daniel e os Leões",
+    type: "Jogo: Memória Cristã"
+  },
+  {
+    image: "https://i.pinimg.com/736x/c1/64/0b/c1640bc59c80f104bda3e79f3dd09c42.jpg",
+    title: "Davi e Golias",
+    type: "Desafio: Versículos"
+  },
+  {
+    image: "https://i.pinimg.com/736x/cb/c4/a7/cbc4a702620bc869c5949e243a05fb64.jpg",
+    title: "Jesus e as Crianças",
+    type: "Atividade: Pintura Bíblica"
+  },
+  // Repetindo as imagens para ter mais itens no carrossel
+  {
+    image: "https://i.pinimg.com/736x/e4/e1/0e/e4e10e6cf6c607073ddd0041799e765a.jpg",
+    title: "Arca de Noé - Colorir",
+    type: "Jogo: Memória Cristã"
+  },
+  {
+    image: "https://i.pinimg.com/736x/d3/13/e9/d313e933218e8794d5108710298d6c7d.jpg",
+    title: "Daniel - Desenho",
+    type: "Desafio: Versículos"
+  },
+  {
+    image: "https://i.pinimg.com/736x/c1/64/0b/c1640bc59c80f104bda3e79f3dd09c42.jpg",
+    title: "Davi - História",
+    type: "Atividade: Pintura Bíblica"
+  },
+  {
+    image: "https://i.pinimg.com/736x/cb/c4/a7/cbc4a702620bc869c5949e243a05fb64.jpg",
+    title: "Jesus - Aprendizado",
+    type: "Jogo: Memória Cristã"
+  }
+];
+
 export const ActivitySamplesSection = () => {
   const [currentBuyer, setCurrentBuyer] = useState<null | typeof recentBuyers[0]>(null);
   
@@ -64,22 +109,21 @@ export const ActivitySamplesSection = () => {
           className="w-full max-w-5xl mx-auto"
         >
           <CarouselContent>
-            {[...Array(8)].map((_, index) => (
+            {biblicalActivities.map((activity, index) => (
               <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                 <div className="p-2">
                   <div className="bg-blue-50 rounded-xl overflow-hidden shadow-md card-hover border border-blue-100 aspect-[3/4]">
                     <div className="h-full flex flex-col">
-                      <div className="flex-1 bg-gradient-to-b from-blue-100 to-blue-50 p-4 flex items-center justify-center">
-                        <p className="text-center text-blue-600">
-                          {index % 3 === 0 ? "Atividade: Pintura Bíblica" : 
-                           index % 3 === 1 ? "Jogo: Memória Cristã" : 
-                           "Desafio: Versículos"}
-                        </p>
+                      <div className="flex-1 overflow-hidden">
+                        <img
+                          src={activity.image}
+                          alt={activity.title}
+                          className="w-full h-full object-cover"
+                        />
                       </div>
                       <div className="p-4 bg-white">
-                        <p className="text-sm font-medium text-gray-800 text-center">
-                          Exemplo #{index + 1} - PLR Luz Infantil
-                        </p>
+                        <p className="text-sm font-medium text-blue-600">{activity.type}</p>
+                        <p className="text-sm font-medium text-gray-800 mt-1">{activity.title}</p>
                       </div>
                     </div>
                   </div>
