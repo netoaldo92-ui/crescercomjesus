@@ -39,26 +39,26 @@ const biblicalActivities = [
     title: "Jesus e as Crianças",
     type: "Atividade: Pintura Bíblica"
   },
-  // Repetindo as imagens para ter mais itens no carrossel
+  {
+    image: "https://i.pinimg.com/736x/22/a9/bb/22a9bb4e6ba8ebb16c7efee0a2b3e16f.jpg",
+    title: "José do Egito",
+    type: "História: Perdão e Esperança"
+  },
+  // Repetindo algumas imagens para ter mais itens no carrossel
   {
     image: "https://i.pinimg.com/736x/e4/e1/0e/e4e10e6cf6c607073ddd0041799e765a.jpg",
     title: "Arca de Noé - Colorir",
     type: "Jogo: Memória Cristã"
   },
   {
-    image: "https://i.pinimg.com/736x/d3/13/e9/d313e933218e8794d5108710298d6c7d.jpg",
-    title: "Daniel - Desenho",
-    type: "Desafio: Versículos"
+    image: "https://i.pinimg.com/736x/22/a9/bb/22a9bb4e6ba8ebb16c7efee0a2b3e16f.jpg",
+    title: "José - A Túnica",
+    type: "Atividade: Colorir"
   },
   {
     image: "https://i.pinimg.com/736x/c1/64/0b/c1640bc59c80f104bda3e79f3dd09c42.jpg",
     title: "Davi - História",
     type: "Atividade: Pintura Bíblica"
-  },
-  {
-    image: "https://i.pinimg.com/736x/cb/c4/a7/cbc4a702620bc869c5949e243a05fb64.jpg",
-    title: "Jesus - Aprendizado",
-    type: "Jogo: Memória Cristã"
   }
 ];
 

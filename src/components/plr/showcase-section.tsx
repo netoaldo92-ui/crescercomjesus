@@ -22,7 +22,11 @@ const biblicalStories = [
     title: "Jesus e as Crianças",
     type: "Personagem bíblico infantil"
   },
-  // Duplicando para completar o grid
+  { 
+    image: "https://i.pinimg.com/736x/22/a9/bb/22a9bb4e6ba8ebb16c7efee0a2b3e16f.jpg",
+    title: "José do Egito",
+    type: "História bíblica ilustrada"
+  },
   { 
     image: "https://i.pinimg.com/736x/e4/e1/0e/e4e10e6cf6c607073ddd0041799e765a.jpg",
     title: "Arca de Noé - Colorir",
@@ -34,14 +38,9 @@ const biblicalStories = [
     type: "Jogo bíblico infantil"
   },
   { 
-    image: "https://i.pinimg.com/736x/c1/64/0b/c1640bc59c80f104bda3e79f3dd09c42.jpg",
-    title: "Davi - Quebra-cabeça",
+    image: "https://i.pinimg.com/736x/22/a9/bb/22a9bb4e6ba8ebb16c7efee0a2b3e16f.jpg",
+    title: "José - Atividades",
     type: "Jogo bíblico infantil"
-  },
-  { 
-    image: "https://i.pinimg.com/736x/cb/c4/a7/cbc4a702620bc869c5949e243a05fb64.jpg",
-    title: "Jesus - Atividades",
-    type: "Material educativo cristão"
   },
 ];
 
