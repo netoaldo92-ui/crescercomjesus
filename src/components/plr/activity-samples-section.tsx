@@ -40,7 +40,7 @@ const biblicalActivities = [
     type: "Atividade: Pintura Bíblica"
   },
   {
-    image: "https://i.pinimg.com/736x/22/a9/bb/22a9bb4e6ba8ebb16c7efee0a2b3e16f.jpg",
+    image: "https://i.pinimg.com/736x/15/0b/33/150b33202bc4bf472cf3c5d93c893939.jpg",
     title: "José do Egito",
     type: "História: Perdão e Esperança"
   },
@@ -51,7 +51,7 @@ const biblicalActivities = [
     type: "Jogo: Memória Cristã"
   },
   {
-    image: "https://i.pinimg.com/736x/22/a9/bb/22a9bb4e6ba8ebb16c7efee0a2b3e16f.jpg",
+    image: "https://i.pinimg.com/736x/15/0b/33/150b33202bc4bf472cf3c5d93c893939.jpg",
     title: "José - A Túnica",
     type: "Atividade: Colorir"
   },
