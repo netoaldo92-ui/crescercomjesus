@@ -37,11 +37,15 @@ export const FaqSection = () => {
         </h2>
         <Accordion type="single" collapsible className="w-full">
           {faqs.map((faq, index) => (
-            <AccordionItem key={index} value={`item-${index}`} className="bg-card border-b-0 mb-2 rounded-md">
-              <AccordionTrigger className="p-6 text-lg font-semibold text-left hover:no-underline">
+            <AccordionItem 
+              key={index} 
+              value={`item-${index}`} 
+              className="bg-card border border-gray-700 mb-4 rounded-md overflow-hidden"
+            >
+              <AccordionTrigger className="p-6 text-lg font-semibold text-white text-left hover:no-underline">
                 {faq.question}
               </AccordionTrigger>
-              <AccordionContent className="p-6 pt-0 text-base text-gray-300">
+              <AccordionContent className="px-6 pb-6 text-base text-gray-300">
                 {faq.answer}
               </AccordionContent>
             </AccordionItem>

@@ -24,20 +24,20 @@ export const TestimonialsSection = () => {
     <section className="py-20 sm:py-24 bg-card">
       <div className="container mx-auto px-4">
         <div className="text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+          <h2 className="text-3xl font-bold text-white sm:text-4xl mb-8">
             Veja o que as famílias estão dizendo
           </h2>
         </div>
-        <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {testimonials.map((testimonial) => (
-            <Card key={testimonial.author} className="p-6 bg-background border-brand-yellow/20">
+            <Card key={testimonial.author} className="p-6 bg-background border-brand-yellow/20 shadow-lg hover:shadow-brand-yellow/10 transition-all">
               <CardContent className="p-0">
                 <div className="flex mb-4">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="h-5 w-5 text-brand-yellow fill-current" />
                   ))}
                 </div>
-                <blockquote className="text-gray-300 italic">“{testimonial.quote}”</blockquote>
+                <blockquote className="text-gray-300 italic">"{testimonial.quote}"</blockquote>
                 <footer className="mt-4">
                   <p className="font-semibold text-white">{testimonial.author}</p>
                   <p className="text-gray-400">{testimonial.role}</p>

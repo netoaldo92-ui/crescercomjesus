@@ -37,12 +37,11 @@ export const HeroSection = () => {
           Transforme a educação cristã em uma aventura diária com histórias e atividades que encantam.
         </p>
         <div className="mt-10">
-          <Button 
-            size="lg" 
-            className="bg-brand-yellow text-gray-900 font-bold hover:bg-brand-yellow/90 shadow-lg text-xl px-10 py-8 rounded-md w-full max-w-md mx-auto"
+          <button 
+            className="cta-button text-xl px-10 py-8 w-full max-w-md mx-auto"
           >
             QUERO ENSINAR A BÍBLIA DE FORMA DIVERTIDA
-          </Button>
+          </button>
         </div>
       </div>
 

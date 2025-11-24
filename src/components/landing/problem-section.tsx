@@ -20,7 +20,7 @@ export const ProblemSection = () => {
     <section className="py-20 sm:py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white">
             Seu filho não se interessa pela Bíblia?
           </h2>
           <p className="mt-4 text-lg text-gray-300">
@@ -29,7 +29,7 @@ export const ProblemSection = () => {
         </div>
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
           {problems.map((problem, index) => (
-            <div key={index} className="bg-card p-6 rounded-lg text-center">
+            <div key={index} className="bg-card p-6 rounded-lg text-center border border-gray-700 shadow-xl hover:shadow-brand-yellow/10 hover:border-gray-600 transition-all">
               <div className="flex justify-center mb-4">
                 <problem.icon className="h-12 w-12 text-brand-yellow" />
               </div>

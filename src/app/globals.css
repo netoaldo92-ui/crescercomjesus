@@ -4,38 +4,36 @@
 
 @layer base {
   :root {
-    --background: 257 50% 6%; /* Roxo/Azul escuro */
+    --background: 253 31% 4%; /* Cor de fundo ainda mais escura */
     --foreground: 0 0% 98%; /* Branco */
 
-    --card: 257 50% 10%;
+    --card: 253 25% 8%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 257 50% 6%;
+    --popover: 253 31% 4%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 45 100% 51%; /* Amarelo */
-    --primary-foreground: 257 50% 6%;
+    --primary: 45 100% 70%; /* Amarelo mais vibrante */
+    --primary-foreground: 253 31% 4%;
 
-    --secondary: 257 50% 15%;
+    --secondary: 253 30% 10%;
     --secondary-foreground: 0 0% 98%;
 
-    --muted: 257 50% 15%;
+    --muted: 253 25% 15%;
     --muted-foreground: 0 0% 63.9%;
 
-    --accent: 45 100% 51%;
-    --accent-foreground: 257 50% 6%;
+    --accent: 45 100% 70%;
+    --accent-foreground: 253 31% 4%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 257 50% 15%;
-    --input: 257 50% 15%;
-    --ring: 45 100% 51%;
+    --border: 253 25% 15%;
+    --input: 253 25% 15%;
+    --ring: 45 100% 70%;
 
     --radius: 0.5rem;
   }
-
-  /* O tema .dark não é mais necessário com essa base */
 }
 
 @layer base {
@@ -46,4 +44,16 @@
     @apply bg-background text-foreground;
     font-family: 'Inter', sans-serif;
   }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight;
+  }
+}
+
+/* Estilos específicos para botões como no site original */
+.cta-button {
+  @apply bg-brand-yellow text-gray-900 font-bold hover:bg-brand-yellow/90 
+         shadow-lg py-6 px-8 rounded-md text-center transition-all
+         border-2 border-brand-yellow/30 hover:scale-[1.02] 
+         hover:shadow-xl hover:border-brand-yellow/50;
 }
