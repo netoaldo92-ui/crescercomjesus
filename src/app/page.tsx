@@ -10,6 +10,7 @@ import { SalesPageSection } from "@/components/plr/sales-page-section";
 import { LicenseSection } from "@/components/plr/license-section";
 import { BenefitsSection } from "@/components/plr/benefits-section";
 import { BonusSection } from "@/components/plr/bonus-section";
+import { FaqSection } from "@/components/plr/faq-section";
 import { FinalCtaSection } from "@/components/plr/final-cta-section";
 import { CountdownTimer } from "@/components/plr/countdown-timer";
 
@@ -30,6 +31,7 @@ export default function LandingPage() {
         <SalesPageSection />
         <LicenseSection />
         <BonusSection />
+        <FaqSection />
         <FinalCtaSection />
       </main>
       
