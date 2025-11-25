@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
+import { ScrollIndicator } from "@/components/plr/scroll-indicator";
 
 // Simulação de notificações de venda
 const salesNotifications = [
@@ -90,6 +91,9 @@ export const HeroSection = () => {
           </div>
         </div>
       </div>
+      
+      {/* Indicador de rolagem */}
+      <ScrollIndicator />
       
       {/* Notificações de venda */}
       {notification && (

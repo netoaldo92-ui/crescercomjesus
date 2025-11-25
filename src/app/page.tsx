@@ -8,18 +8,20 @@ import { ActivitySamplesSection } from "@/components/plr/activity-samples-sectio
 import { PurposeSection } from "@/components/plr/purpose-section";
 import { SalesPageSection } from "@/components/plr/sales-page-section";
 import { LicenseSection } from "@/components/plr/license-section";
-import { BenefitsSection } from "@/components/plr/benefits-section"; // A nova seção persuasiva
+import { BenefitsSection } from "@/components/plr/benefits-section";
 import { BonusSection } from "@/components/plr/bonus-section";
 import { FinalCtaSection } from "@/components/plr/final-cta-section";
+import { CountdownTimer } from "@/components/plr/countdown-timer";
 
 export default function LandingPage() {
   return (
     <div className="font-sans">
       <Header />
+      <CountdownTimer />
       <main className="overflow-hidden">
         <HeroSection />
         <PresentationSection />
-        <BenefitsSection /> {/* Adicionada a nova seção aqui */}
+        <BenefitsSection />
         <ShowcaseSection />
         <KitContentsSection />
         <ProductDescriptionSection />
