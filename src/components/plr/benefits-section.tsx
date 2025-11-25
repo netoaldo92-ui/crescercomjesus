@@ -2,10 +2,11 @@
 
 import { CheckCircle2, Gift, DollarSign, Zap, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { SectionScrollIndicator } from "@/components/plr/section-scroll-indicator";
 
 export const BenefitsSection = () => {
   return (
-    <section className="py-20 sm:py-24 bg-white">
+    <section id="benefits" className="py-20 sm:py-24 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-4xl mx-auto mb-12">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-100 text-blue-700 font-semibold mb-4">
@@ -236,7 +237,7 @@ export const BenefitsSection = () => {
               ⏰ NÃO ESPERE MAIS!
             </h3>
             <a 
-              href="https://pay.kiwify.com.br/8GQXukA" 
+              href="https://pay.kiwify.com.br/8GQX ukA" 
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-5 px-10 rounded-lg text-xl uppercase shadow-lg"
@@ -245,6 +246,13 @@ export const BenefitsSection = () => {
             </a>
           </div>
         </div>
+
+        {/* Indicador para próxima seção */}
+        <SectionScrollIndicator 
+          nextSectionId="showcase"
+          message="👀 Veja exemplos reais do material que você vai receber"
+          variant="default"
+        />
       </div>
     </section>
   );

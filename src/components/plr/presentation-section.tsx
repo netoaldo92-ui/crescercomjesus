@@ -1,6 +1,7 @@
 "use client";
 
 import { Check, Heart, DollarSign, Clock } from "lucide-react";
+import { SectionScrollIndicator } from "@/components/plr/section-scroll-indicator";
 
 const problems = [
   {
@@ -87,6 +88,13 @@ export const PresentationSection = () => {
             </a>
           </div>
         </div>
+
+        {/* Indicador para próxima seção */}
+        <SectionScrollIndicator 
+          nextSectionId="benefits"
+          message="👇 Veja todos os benefícios que você vai receber"
+          variant="highlight"
+        />
       </div>
     </section>
   );

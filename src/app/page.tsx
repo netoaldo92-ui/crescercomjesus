@@ -13,12 +13,16 @@ import { BonusSection } from "@/components/plr/bonus-section";
 import { FaqSection } from "@/components/plr/faq-section";
 import { FinalCtaSection } from "@/components/plr/final-cta-section";
 import { CountdownTimer } from "@/components/plr/countdown-timer";
+import { ScrollProgressBar } from "@/components/plr/scroll-progress-bar";
+import { FloatingScrollGuide } from "@/components/plr/floating-scroll-guide";
 
 export default function LandingPage() {
   return (
     <div className="font-sans">
+      <ScrollProgressBar />
       <Header />
       <CountdownTimer />
+      <FloatingScrollGuide />
       <main className="overflow-hidden">
         <HeroSection />
         <PresentationSection />
