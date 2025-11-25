@@ -50,10 +50,24 @@ export const HeroSection = () => {
             Comece a ganhar entre R$ 2.000 e R$ 5.000 ainda hoje revendendo um produto cristão com propósito.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
-            <Button className="cta-button text-xl bg-blue-400 hover:bg-blue-500 text-white px-12 py-8 rounded-xl w-full sm:w-auto">
+            <a 
+              href="https://pay.kiwify.com.br/8GQXukA" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cta-button text-xl bg-blue-400 hover:bg-blue-500 text-white px-12 py-8 rounded-xl w-full sm:w-auto inline-block"
+            >
               QUERO MEU PLR AGORA
-            </Button>
-            <Button variant="outline" className="bg-white/90 text-blue-600 hover:bg-white text-lg px-8 py-6 rounded-xl border-2 border-blue-300 w-full sm:w-auto">
+            </a>
+            <Button 
+              variant="outline" 
+              className="bg-white/90 text-blue-600 hover:bg-white text-lg px-8 py-6 rounded-xl border-2 border-blue-300 w-full sm:w-auto"
+              onClick={() => {
+                // Rolar suavemente para a seção de apresentação
+                document.querySelector('#presentation')?.scrollIntoView({ 
+                  behavior: 'smooth' 
+                });
+              }}
+            >
               Saiba mais
             </Button>
           </div>
@@ -64,7 +78,7 @@ export const HeroSection = () => {
           <div className="relative w-full max-w-5xl rounded-2xl overflow-hidden shadow-xl">
             <div className="flex justify-center items-center bg-white p-5 rounded-2xl shadow-lg">
               <img 
-                src="https://i.pinimg.com/736x/1a/fd/48/1afd48e1e544cc46bdb515fc8445c2ce.jpg" 
+                src="https://i.pinimg.com/736x/22/a9/bb/22a9bb4e6ba8ebb16c7efee0a2b3e16f.jpg" 
                 alt="Material infantil cristão PLR" 
                 className="w-full h-auto rounded-lg max-w-4xl"
               />

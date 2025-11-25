@@ -25,11 +25,13 @@ export const ProductDescriptionSection = () => {
             </div>
             
             <div className="bg-white p-6 rounded-xl shadow-lg glow-effect">
-              {/* Placeholder para imagem do produto */}
-              <div className="aspect-square rounded-lg bg-blue-100 flex items-center justify-center mb-4">
-                <p className="text-blue-500 text-center p-4">
-                  Imagem do produto em dispositivo digital (tablet mostrando atividades)
-                </p>
+              {/* Imagem real do produto */}
+              <div className="rounded-lg overflow-hidden mb-4">
+                <img
+                  src="https://i.pinimg.com/736x/22/a9/bb/22a9bb4e6ba8ebb16c7efee0a2b3e16f.jpg"
+                  alt="Kit PLR Luz Infantil"
+                  className="w-full h-auto"
+                />
               </div>
               <div className="text-center">
                 <p className="font-semibold text-gray-800">

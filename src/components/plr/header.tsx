@@ -27,16 +27,18 @@ export const Header = () => {
             </h1>
           </div>
           
-          <Button 
-            size="sm" 
-            className={`${
+          <a 
+            href="https://pay.kiwify.com.br/8GQXukA" 
+            target="_blank"
+            rel="noopener noreferrer" 
+            className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
               isScrolled 
                 ? "bg-blue-600 hover:bg-blue-700 text-white" 
                 : "bg-white/20 hover:bg-white/30 text-white backdrop-blur-sm"
             }`}
           >
             Garantir Agora
-          </Button>
+          </a>
         </div>
       </div>
     </header>

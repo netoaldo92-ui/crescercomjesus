@@ -10,7 +10,7 @@ const bullets = [
 
 export const PresentationSection = () => {
   return (
-    <section className="py-20 sm:py-24 bg-white">
+    <section id="presentation" className="py-20 sm:py-24 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto">
           <h2 className="text-3xl sm:text-4xl font-bold text-blue-600 mb-12">

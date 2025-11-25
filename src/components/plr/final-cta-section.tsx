@@ -46,9 +46,14 @@ export const FinalCtaSection = () => {
               </div>
             </div>
             
-            <Button size="lg" className="w-full bg-yellow-500 hover:bg-yellow-600 text-xl font-bold py-8 text-gray-900">
+            <a 
+              href="https://pay.kiwify.com.br/8GQXukA" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full bg-yellow-500 hover:bg-yellow-600 text-xl font-bold py-8 text-gray-900 text-center rounded-lg"
+            >
               QUERO MEU PLR AGORA
-            </Button>
+            </a>
             
             <div className="flex justify-center mt-4 text-sm opacity-80">
               <Lock className="h-4 w-4 mr-2" />
