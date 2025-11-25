@@ -39,7 +39,7 @@ export const BenefitsSection = () => {
         {/* O que Está Incluído */}
         <div className="max-w-4xl mx-auto mt-16">
           <h3 className="text-2xl font-bold text-blue-700 text-center mb-8">
-            📦 PACOTE COMPLETO PLR LUZ INFANTIL
+            📦 PACOTE COMPLETO KIT CRISTÃO
           </h3>
           <p className="text-center text-xl font-medium mb-8">
             Você recebe <span className="font-bold text-blue-600">TUDO ISSO</span> em um único pacote:
@@ -57,7 +57,7 @@ export const BenefitsSection = () => {
               <div className="space-y-3 ml-11">
                 <div className="flex items-start">
                   <CheckCircle2 className="h-5 w-5 text-green-500 mr-3 flex-shrink-0 mt-0.5" />
-                  <p className="text-gray-800">Criativos profissionais e copy persuasiva já testada e aprovada</p>
+                  <p className="text-gray-800">Materiais profissionais e textos de vendas já testados e aprovados</p>
                 </div>
                 <div className="flex items-start">
                   <CheckCircle2 className="h-5 w-5 text-green-500 mr-3 flex-shrink-0 mt-0.5" />
@@ -79,7 +79,7 @@ export const BenefitsSection = () => {
                 <span className="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center mr-3">
                   2
                 </span>
-                Licença PLR Total
+                Direitos Completos de Revenda
               </h4>
               
               <div className="space-y-3 ml-11">
@@ -201,11 +201,8 @@ export const BenefitsSection = () => {
               <Clock className="h-6 w-6 mr-2 animate-pulse" />
               <p className="uppercase font-bold">Oferta por tempo limitado</p>
             </div>
-            <p className="text-lg mb-2">
-              Investimento normal: <span className="line-through text-gray-300">R$297,00</span>
-            </p>
             <div className="my-4">
-              <p className="text-xl">Hoje, por apenas:</p>
+              <p className="text-xl">Investimento único:</p>
               <p className="text-6xl font-bold my-3">R$ 29,90</p>
               <p>ou 3x de R$ 9,97 sem juros</p>
             </div>
