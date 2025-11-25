@@ -51,6 +51,103 @@
   }
 }
 
+/* Animações interativas avançadas */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { 
+    box-shadow: 0 0 20px rgba(96, 165, 250, 0.3);
+    transform: scale(1);
+  }
+  50% { 
+    box-shadow: 0 0 40px rgba(96, 165, 250, 0.6);
+    transform: scale(1.02);
+  }
+}
+
+@keyframes slide-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-2px); }
+  20%, 40%, 60%, 80% { transform: translateX(2px); }
+}
+
+/* Classes utilitárias interativas */
+.float-animation {
+  animation: float 3s ease-in-out infinite;
+}
+
+.pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.slide-in-up {
+  animation: slide-in-up 0.6s ease-out;
+}
+
+.bounce-in {
+  animation: bounce-in 0.8s ease-out;
+}
+
+.shake-on-hover:hover {
+  animation: shake 0.5s ease-in-out;
+}
+
+/* Efeitos hover interativos */
+.interactive-card {
+  @apply transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:-translate-y-2;
+  cursor: pointer;
+}
+
+.interactive-card:hover {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(147, 197, 253, 0.1));
+}
+
+.interactive-button {
+  @apply relative overflow-hidden transition-all duration-300 transform hover:scale-105;
+}
+
+.interactive-button::before {
+  content: '';
+  @apply absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0 transform -skew-x-12 -translate-x-full;
+  transition: all 0.6s;
+}
+
+.interactive-button:hover::before {
+  @apply opacity-20 translate-x-full;
+}
+
 .blue-gradient {
   @apply bg-gradient-to-r from-blue-500 to-blue-600;
 }
@@ -66,21 +163,21 @@
 
 .cta-button {
   @apply bg-blue-400 text-white font-bold 
-         shadow-lg py-6 px-8 rounded-xl text-center transition-all
-         border-2 border-blue-300 hover:scale-[1.02] 
-         hover:shadow-xl hover:bg-blue-500;
+         shadow-lg py-6 px-8 rounded-xl text-center transition-all duration-300
+         border-2 border-blue-300 hover:scale-105 
+         hover:shadow-2xl hover:bg-blue-500 interactive-button;
 }
 
 .card-hover {
-  @apply transition-all duration-300 hover:shadow-lg hover:scale-[1.02];
+  @apply interactive-card;
 }
 
 .pop-notification {
   @apply fixed bottom-4 left-4 bg-white p-4 rounded-lg shadow-lg border-l-4 border-green-500 z-50 
-         animate-in slide-in-from-bottom ease-in-out duration-500;
+         slide-in-up;
 }
 
-/* Animação para os badges/elementos destacados */
+/* Animações para os badges/elementos destacados */
 @keyframes pulse-light {
   0%, 100% {
     box-shadow: 0 0 0 0 rgba(96, 165, 250, 0.7);
@@ -92,4 +189,88 @@
 
 .pulse-animation {
   animation: pulse-light 2s infinite;
+}
+
+/* Efeitos de scroll reveal */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+.scroll-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Efeitos de hover para textos */
+.text-hover-effect {
+  @apply transition-all duration-300;
+}
+
+.text-hover-effect:hover {
+  @apply text-blue-600 transform scale-105;
+  text-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
+}
+
+/* Botões com efeito ripple */
+.ripple-effect {
+  @apply relative overflow-hidden;
+}
+
+.ripple-effect::after {
+  content: '';
+  @apply absolute top-1/2 left-1/2 w-0 h-0 bg-white opacity-30 rounded-full;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.ripple-effect:active::after {
+  width: 300px;
+  height: 300px;
+}
+
+/* Gradientes animados */
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animated-gradient {
+  background: linear-gradient(-45deg, #3b82f6, #1d4ed8, #2563eb, #1e40af);
+  background-size: 400% 400%;
+  animation: gradient-shift 3s ease infinite;
+}
+
+/* Efeitos de loading e skeleton */
+@keyframes shimmer {
+  0% { background-position: -200px 0; }
+  100% { background-position: calc(200px + 100%) 0; }
+}
+
+.shimmer {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200px 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* Micro-interações para ícones */
+.icon-bounce:hover {
+  animation: bounce-in 0.6s ease-out;
+}
+
+.icon-rotate:hover {
+  transform: rotate(360deg);
+  transition: transform 0.6s ease-in-out;
+}
+
+/* Efeitos de foco melhorados */
+.focus-ring:focus {
+  @apply outline-none ring-4 ring-blue-300 ring-opacity-50;
+}
+
+/* Animações de entrada escalonadas */
+.stagger-animation {
+  animation-delay: calc(var(--stagger) * 0.1s);
 }
